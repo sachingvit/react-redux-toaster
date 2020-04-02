@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.toast-box {
+  z-index: 9;
+  padding-left: 30px;
+  position: fixed;
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  top: 0;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end; 
+}
+
+.toast-card {
+  padding: 10px;
+  width: 100%;
+  max-width: 200px;;
+  height: auto;
+  background-color: seagreen;
+  color: #ffffff;
+  margin: 0 0 5px 5px;
+  display: flex;
+  align-self: flex-end; 
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+.toast-card .message {
+  padding-right: 5px;
+  max-width: calc(100% - 24px);
+  flex: 0 0 100%;
+}
+.toast-card .remove-icon {
+  position: relative;
+  flex: 0 0 24px  ;
+  max-width: 24px;
+  height: 24px;
+  text-align: center;
+  padding: 3px;
+}
+
+.toast-card .remove-icon::before {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: tomato;
+}
+
